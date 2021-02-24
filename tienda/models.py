@@ -15,22 +15,22 @@ class Stock_En_Tienda(models.Model):
     Estado = models.CharField(max_length=50)
 
 class Tienda1(models.Model):
-    ID_Ciudad = models.IntegerField(editable=False,default=1)
+    ID_Ciudad = models.IntegerField()
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')    
     
 class Tienda2(models.Model):
-    ID_Ciudad = models.IntegerField(editable=False,default=2)
+    ID_Ciudad = models.IntegerField()
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')    
 
 class Tienda3(models.Model):
-    ID_Ciudad = models.IntegerField(editable=False,default=3)
+    ID_Ciudad = models.IntegerField()
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')
 
 class Tienda4(models.Model):
-    ID_Ciudad = models.IntegerField(editable=False,default=4)
+    ID_Ciudad = models.IntegerField()
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')
 
