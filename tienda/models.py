@@ -15,25 +15,21 @@ class Stock_En_Tienda(models.Model):
     Estado = models.CharField(max_length=50)
 
 class Tienda1(models.Model):
-    Stock_Tienda = models.ForeignKey(Stock_En_Tienda, on_delete=models.CASCADE)
     ID_Ciudad = models.IntegerField(editable=False,default=1)
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')    
     
 class Tienda2(models.Model):
-    Stock_Tienda = models.ForeignKey(Stock_En_Tienda, on_delete=models.CASCADE)
     ID_Ciudad = models.IntegerField(editable=False,default=2)
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')    
 
 class Tienda3(models.Model):
-    Stock_Tienda = models.ForeignKey(Stock_En_Tienda, on_delete=models.CASCADE)
     ID_Ciudad = models.IntegerField(editable=False,default=3)
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')
 
 class Tienda4(models.Model):
-    Stock_Tienda = models.ForeignKey(Stock_En_Tienda, on_delete=models.CASCADE)
     ID_Ciudad = models.IntegerField(editable=False,default=4)
     Nombre = models.CharField(max_length=200, blank= False, default='')
     Logo = models.CharField(max_length=500, blank= False, default='')

@@ -18,36 +18,52 @@ def product_list(request):
             return Response(product_serializer.data, status=status.HTTP_201_CREATED)
         return Response(product_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def tienda1_list(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
+        tienda1 = Tienda1.objects.all()
+        tienda_serializer = Tienda1Serializer(tienda1, many=True)
+        return Response(tienda_serializer.data)
+    elif request.method == 'POST':
         tienda1_serializer = Tienda1Serializer(data=request.data)
         if tienda1_serializer.is_valid():
             tienda1_serializer.save()
             return Response(tienda1_serializer.data, status=status.HTTP_201_CREATED)
         return Response(tienda1_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def tienda2_list(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
+        tienda2 = Tienda2.objects.all()
+        tienda_serializer = Tienda2Serializer(tienda2, many=True)
+        return Response(tienda_serializer.data)
+    elif request.method == 'POST':
         tienda2_serializer = Tienda2Serializer(data=request.data)
         if tienda2_serializer.is_valid():
             tienda2_serializer.save()
             return Response(tienda2_serializer.data, status=status.HTTP_201_CREATED)
         return Response(tienda2_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def tienda3_list(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
+        tienda3 = Tienda3.objects.all()
+        tienda_serializer = Tienda3Serializer(tienda3, many=True)
+        return Response(tienda_serializer.data)
+    elif request.method == 'POST':
         tienda3_serializer = Tienda3Serializer(data=request.data)
         if tienda3_serializer.is_valid():
             tienda3_serializer.save()
             return Response(tienda3_serializer.data, status=status.HTTP_201_CREATED)
         return Response(tienda3_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['POST'])
+@api_view(['GET','POST'])
 def tienda4_list(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
+        tienda4 = Tienda4.objects.all()
+        tienda_serializer = Tienda4Serializer(tienda4, many=True)
+        return Response(tienda_serializer.data)
+    elif request.method == 'POST':
         tienda4_serializer = Tienda4Serializer(data=request.data)
         if tienda4_serializer.is_valid():
             tienda4_serializer.save()
