@@ -6,7 +6,7 @@ class Categoria(models.Model):
     Descripcion = models.CharField(max_length=500, blank= False, default='')
 
 class Stock_En_Tienda(models.Model):
-    SKU = models.CharField(max_length=200, blank= False, default='')
+    SKU = models.CharField(max_length=200, blank= False, primary_key=True)
     Categori_ID = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     pvp = models.DecimalField(max_digits=5, decimal_places=2)
     margen_ganancia = models.DecimalField(max_digits=5, decimal_places=2)
